@@ -87,6 +87,30 @@ position: absolute;
   	margin-top: 2em;
   }
 
+  .tabs li {
+    float: left;
+    background: #E6EFF4;
+    list-style: none;
+    padding: 0.5em 2em;
+    border-left: 6px solid #b4bec3;
+    border-top: 6px solid #b4bec3;
+    margin-right: 0.7em;
+  }
+
+  .tabs li:first-of-type {
+    border-left: none;
+
+  }
+
+  .tabs {
+    top: -40px;
+    position: absolute;
+    left: -6px;
+    margin: 0;
+    padding: 0;
+    border-left: 6px solid #171717;
+  }
+
   .content {
     position: relative;
     background-color: #E6EFF4;
