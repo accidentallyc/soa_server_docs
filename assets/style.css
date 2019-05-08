@@ -64,6 +64,7 @@ position: absolute;
   .invslot-sprite[item="raw_salmon"]{ background-position: -928px -1664px; }
   .invslot-sprite[item="saddle"]{     background-position: -928px -3552px; }
   .invslot-sprite[item="skull_skeleton"]{ background-position: -192px -960px; }
+  .invslot-sprite[item="pufferfish"]{ background-position: -864px -1664px; }
 
   .entity-sprite{
   	height: 52px;
