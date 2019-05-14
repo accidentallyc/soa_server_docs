@@ -1,105 +1,30 @@
-<head>
-	<script
-	  src="https://code.jquery.com/jquery-3.4.0.min.js"
-	  integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
-	  crossorigin="anonymous"></script>
+<html>
+	<head>
+		<script
+		  src="https://code.jquery.com/jquery-3.4.0.min.js"
+		  integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+		  crossorigin="anonymous"></script>
+		  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-route.min.js"></script>
+		<script src="./assets/dist/jst.js"></script>
+		<script src="./assets/dist/main.js"></script>
+		<link href="./assets/dist/main.css" rel="stylesheet"/>
+		<title>SOA - Home</title>
+	</head>
+	<body>
+		<div ng-app="soa">
+			<header class="header"><img src="./assets/img/logo.png" class="logo" /></header>
 
-	<link href="./assets/style.css" rel="stylesheet"/>
-	<title>SOA - Home</title>
-</head>
-<header class="header"><img src="./assets/logo.png" class="logo" /></header>
-
-<div class="content">
-	<ul class="tabs">
-		<li><a href="index.html">Home</a></li>
-		<li><a href="ark.html">Arks</a></li>
-	</ul>
-
-	<h1>Patch Notes</h1>
-	<hr />
-	<b>patch 1.2</b>
-	<ul>
-		<li>Nerfed emerald faith returns from 8 to 6</li>
-		<li>Dolphin tier 2 and tier 3 swapped</li>
-		<li>Temporary recipe -> torches yield 64</li>
-		<li>Lowered server render distance from 10 to 7</li>
-	</ul>
-	
-	<b>patch 1.1</b>
-	<ul>
-		<li>Buffed horse and swapped Tier I with Tier II</li>
-	</ul>
-	<b>patch 1.0</b>
-	<ul>
-		<li><a href="ark.html">Arks</a> Rebalance</li>
-		<li>
-			<ul>
-				<li>New way of offering:</li>
-					<ul>
-						<li>admin is no longer needed for offerings!</li>
-						<li>To offer, you need to trek to Parthenon, go to the middle of
-							the flight of stairs and while facing the temple throw your offerings to the floor.</li>
-						<li>Your offerings will shatter on the ground giving you a small xp and the equivalent
-							favor. See more on the <a href="ark.html">Arks page</a></li>
-					</ul>
-				<li>Added level 2 and 3 tiers for all arks</li>
-				<li>Nerfed nautilus offerings</li>
-				<li>Updated cow tier level 1</li>
-			</ul>
-		</li>
-		<li>New Holy Weapons</li>
-		<li>
-			<ul>
-				<li>Apollos Bow - 35 faith</li>
-				<li>Golden Armor - 100 faith</li>
-				<li>Golden Fleece - 350 faith</li>
-				<li>Helm of Darkness - 20 faith</li>
-				<li>Hermes' Slippers - 60 faith</li>
-				<li>Mountain King's Pickaxe - 70 faith</li>
-				<li>Ring of Solomon - 40 faith</li>
-				<li>Smasher of Thousands - 30 faith</li>
-				<li>St Michaels Sword - 140 faith</li>
-				<li>Sword of Mars - 210 faith</li>
-			</ul>
-		</li>
-	</ul>
-
-	<b>patch 0.3</b>
-	<ul>
-		<li>Rebalanced ark powers</li>
-		<li>Rebalanced ark offerings</li>
-	</ul>
-
-	<b>patch 0.2</b>
-	<ul>
-		<li>Added ark powers</li>
-		<li>Zero hunger now kills people</li>
-	</ul>
-</div>
-
-
-<span class="invslot" template="invslot">
-	<span class="invslot-item">
-		<span class="invslot-sprite" item="gold"></span>
-		<span class="invslot-stacksize"></span>
-	</span>
-</span>
-
-<script type="text/javascript">
-	$('invslot').each(function () {
-		const $me = $(this)		;
-		const item = $me.attr('item');
-		const amt = $me.attr('amt');
-		const $template = $('[template="invslot"]').clone().removeAttr("template").removeAttr("amt");
-
-		if(amt){
-			$template.find('.invslot-stacksize').html(amt)
-		}else{
-			$template.find('.invslot-stacksize').remove();
-		}
-
-		$template.find('.invslot-sprite').attr("item",item);
-
-		$me.replaceWith($template)
-	});
-</script>
+			<section class="content">
+				<ul class="tabs">
+					<li><a href="/#!/home">Home</a></li>
+					<li><a href="/#!/ark">Arks</a></li>
+				</ul>
+				<div id="frame" ng-view>
+					
+				</div>
+			</section>
+		</div>
+	</body>
+</html>
