@@ -24,7 +24,7 @@ this["JST"]["/pages/holy"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += 'holy.html';
+__p += '<div class="page-holy">\r\n\t<h1>Holy Items</h1>\r\n\t<hr />\r\n\r\n\t<input type="text" ng-model="$ctrl.holySearch" placeholder="Type to search name, cost, or description" />\r\n<table>\r\n\t<tr ng-repeat="item in $ctrl.holyItems | filter:$ctrl.holySearch">\r\n\t\t<td class="item-td">\r\n\t\t\t<invslot></invslot>\r\n\t\t</td>\r\n\t\t<td>\r\n\t\t\t<b>{{:: item.name}}</b>\r\n\t\t\t<ul>\r\n\t\t\t\t<li ng-repeat="display in item.display">{{:: display}}</li>\r\n\t\t\t</ul>\r\n\t\t</td>\r\n\t\t<td class="requirements-td">\r\n\t\t\t<p>\r\n\t\t\t\t<span class="unit-symbol">🕊️</span> {{:: item.faithCost}}\r\n\t\t\t</p>\r\n\t\t\t<p>\r\n\t\t\t\t<span class="unit-symbol">💪</span> {{:: item.expCost}}\r\n\t\t\t</p>\r\n\t\t</td>\r\n\t</tr>\r\n</table>\r\n</div>';
 
 }
 return __p

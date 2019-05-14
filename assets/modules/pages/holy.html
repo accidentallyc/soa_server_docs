@@ -1,1 +1,27 @@
-holy.html
+<div class="page-holy">
+	<h1>Holy Items</h1>
+	<hr />
+
+	<input type="text" ng-model="$ctrl.holySearch" placeholder="Type to search name, cost, or description" />
+<table>
+	<tr ng-repeat="item in $ctrl.holyItems | filter:$ctrl.holySearch">
+		<td class="item-td">
+			<invslot></invslot>
+		</td>
+		<td>
+			<b>{{:: item.name}}</b>
+			<ul>
+				<li ng-repeat="display in item.display">{{:: display}}</li>
+			</ul>
+		</td>
+		<td class="requirements-td">
+			<p>
+				<span class="unit-symbol">🕊️</span> {{:: item.faithCost}}
+			</p>
+			<p>
+				<span class="unit-symbol">💪</span> {{:: item.expCost}}
+			</p>
+		</td>
+	</tr>
+</table>
+</div>

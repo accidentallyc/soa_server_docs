@@ -11,7 +11,9 @@ window.app = angular.module("soa",["ngRoute"])
 					template: JST['/pages/ark'](), 
 				})
 				.when('/holy', { 
-					template: JST['/pages/holy'](), 
+					template: JST['/pages/holy'](),
+					controllerAs: "$ctrl",
+					controller : "PageHolyController"
 				})
 				.otherwise({
 					redirectTo:'/home'

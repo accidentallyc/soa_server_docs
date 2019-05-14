@@ -176,4 +176,16 @@ td:first-of-type {
   display: none;
 }
 
+.page-holy .item-td {
+  width: 53px;
+}
+.page-holy .requirements-td {
+  width: 80px;
+}
+.page-holy input {
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 0.5em;
+}
+
 /*# sourceMappingURL=main.css.map */
