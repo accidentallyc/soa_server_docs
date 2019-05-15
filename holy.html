@@ -1,0 +1,47 @@
+<head>
+  <script
+    src="https://code.jquery.com/jquery-3.4.0.min.js"
+    integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+    crossorigin="anonymous"></script>
+
+  <link href="./assets/style.css" rel="stylesheet"/>
+  <title>SOA - Home</title>
+</head>
+<header class="header"><img src="./assets/logo.png" class="logo" /></header>
+
+<div class="content">
+  <ul>
+    <li>
+      <b>Sword of Mars</b>
+      <p>Faith:210</p>
+      <p>Experience:20</p>
+    </li>
+    <li>Exer</li>
+  </ul>
+</div>
+
+<span class="invslot" template="invslot">
+  <span class="invslot-item">
+    <span class="invslot-sprite" item="gold"></span>
+    <span class="invslot-stacksize"></span>
+  </span>
+</span>
+
+<script type="text/javascript">
+  $('invslot').each(function () {
+    const $me = $(this)   ;
+    const item = $me.attr('item');
+    const amt = $me.attr('amt');
+    const $template = $('[template="invslot"]').clone().removeAttr("template").removeAttr("amt");
+
+    if(amt){
+      $template.find('.invslot-stacksize').html(amt)
+    }else{
+      $template.find('.invslot-stacksize').remove();
+    }
+
+    $template.find('.invslot-sprite').attr("item",item);
+
+    $me.replaceWith($template)
+  });
+</script>
