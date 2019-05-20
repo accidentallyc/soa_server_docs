@@ -11,15 +11,18 @@
 		<td>
 			<b>{{:: item.name}}</b>
 			<ul>
-				<li ng-repeat="display in item.display">{{:: display}}</li>
+				<li ng-if="item.owner">
+						<b>owner: </b> {{:: item.owner }}
+				</li>
+				<li ng-repeat="lore in item.lore track by $index">{{:: lore}}</li>
 			</ul>
 		</td>
 		<td class="requirements-td">
 			<p>
-				<span class="unit-symbol">🕊️</span> {{:: item.faithCost}}
+				<span class="unit-symbol">🕊️</span> {{:: item.faithReq}}
 			</p>
 			<p>
-				<span class="unit-symbol">💪</span> {{:: item.expCost}}
+				<span class="unit-symbol">💪</span> {{:: item.levelReq}}
 			</p>
 		</td>
 	</tr>
