@@ -1,4 +1,4 @@
-You can visit the wiki here [https://accidentallyc.github.io/spirit_of_adventure/ark](https://accidentallyc.github.io/spirit_of_adventure/ark)
+You can visit the wiki here [https://accidentallyc.github.io/spirit_of_adventure](https://accidentallyc.github.io/spirit_of_adventure)
 
 ## How to Setup the Project
 
