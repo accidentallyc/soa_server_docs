@@ -1,4 +1,6 @@
-# How to Setup the Project
+You can visit the wiki here [https://accidentallyc.github.io/spirit_of_adventure/ark](https://accidentallyc.github.io/spirit_of_adventure/ark)
+
+## How to Setup the Project
 
 * Install NPM/NODE
 * While in folder run `npm install`
@@ -12,5 +14,3 @@
 ## Committing
 
 Commit the dist files as well
-
-#
