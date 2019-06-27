@@ -1,4 +1,5 @@
-(function (){ window.app = angular.module("soa",["ngRoute"])
+(function (){ 
+window.app = angular.module("soa",["ngRoute"])
 	.service("FirebaseSvc",[
 		function () {
 			var firebaseConfig = {
@@ -23,6 +24,7 @@
 		'$locationProvider',
 		'$routeProvider', 
 		($locationProvider,$routeProvider) => {
+
 			$routeProvider
 				.when('/home', {
 					template: JST['/pages/home'](),

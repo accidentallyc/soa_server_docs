@@ -1,3 +1,4 @@
+
 window.app = angular.module("soa",["ngRoute"])
 	.service("FirebaseSvc",[
 		function () {
@@ -23,6 +24,7 @@ window.app = angular.module("soa",["ngRoute"])
 		'$locationProvider',
 		'$routeProvider', 
 		($locationProvider,$routeProvider) => {
+
 			$routeProvider
 				.when('/home', {
 					template: JST['/pages/home'](),
