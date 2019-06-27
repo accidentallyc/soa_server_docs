@@ -26,7 +26,7 @@ window.app = angular.module("soa",["ngRoute"])
 		($locationProvider,$routeProvider) => {
 
 			$routeProvider
-				.when('/home', {
+				.when('/', {
 					template: JST['/pages/home'](),
 				})
 				.when('/ark', { 
@@ -38,7 +38,7 @@ window.app = angular.module("soa",["ngRoute"])
 					controller : "PageHolyController"
 				})
 				.otherwise({
-					redirectTo:'/home'
+					redirectTo:'/'
 				})
 
 			// configure html5 to get links working on jsfiddle
