@@ -38,5 +38,8 @@ window.app = angular.module("soa",["ngRoute"])
 				.otherwise({
 					redirectTo:'/home'
 				})
+
+			// configure html5 to get links working on jsfiddle
+			$locationProvider.html5Mode(true);
 		}
 	])
