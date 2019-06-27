@@ -1,5 +1,5 @@
 
-window.app = angular.module("soa",["ngRoute"])
+window.app = angular.module("soa",["ngRoute","ngSanitize"])
 	.service("FirebaseSvc",[
 		function () {
 			var firebaseConfig = {
@@ -32,6 +32,14 @@ window.app = angular.module("soa",["ngRoute"])
 				.when('/ark', { 
 					template: JST['/pages/ark'](), 
 				})
+				.when('/roughish-mobs', { 
+					template: JST['/pages/roughish-mobs'](), 
+				})
+				.when('/roughish-mobs/:slug', { 
+					template: JST['/pages/roughish-mobs/container'](), 
+					controllerAs: "$ctrl",
+					controller : "RoughishMobsController"
+				})
 				.when('/holy', { 
 					template: JST['/pages/holy'](),
 					controllerAs: "$ctrl",
@@ -42,6 +50,6 @@ window.app = angular.module("soa",["ngRoute"])
 				})
 
 			// configure html5 to get links working on jsfiddle
-			$locationProvider.html5Mode(true);
+			// $locationProvider.html5Mode(true);
 		}
 	])
