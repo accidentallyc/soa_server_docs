@@ -27,6 +27,6 @@
     "grunt-contrib-jst": "^1.0.0",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-watch": "^1.1.0",
-    "node-sass": "^4.12.0"
+    "node-sass": "^4.13.1"
   }
 }
